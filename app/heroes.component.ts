@@ -70,7 +70,7 @@ import {HeroService} from './hero.service';
   directives: [HeroDetailComponent]
 })
 
-export class HeroComponent implements OnInit {
+export class HeroesComponent implements OnInit {
   public title = 'Tour of Heroes';
   public heroes: Hero[];
   selectedHero: Hero;
