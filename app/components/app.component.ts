@@ -1,13 +1,13 @@
 import {Component, OnInit} from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import {Hero} from './hero';
+import {Hero} from '../models/hero';
 
-import {HeroService} from './hero.service';
+import {HeroService} from '../services/hero.service';
 
-import {DashboardComponent} from './dashboard.component';
-import {HeroesComponent} from './heroes.component';
-import {HeroDetailComponent} from './hero-detail.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {HeroesComponent} from './heroes/heroes.component';
+import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 
 @Component({
   selector: 'my-app',
@@ -19,7 +19,7 @@ import {HeroDetailComponent} from './hero-detail.component';
     </nav>
     <router-outlet></router-outlet>
     `,
-  styleUrls: ['app/app.component.css'],
+  styleUrls: ['app/components/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,

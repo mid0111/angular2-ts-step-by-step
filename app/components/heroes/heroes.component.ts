@@ -1,15 +1,15 @@
 import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 
-import {Hero} from './hero';
+import {Hero} from '../../models/hero';
 
-import {HeroDetailComponent} from './hero-detail.component';
-import {HeroService} from './hero.service';
+import {HeroDetailComponent} from '../hero-detail/hero-detail.component';
+import {HeroService} from '../../services/hero.service';
 
 @Component({
   selector: 'my-heroes',
-  templateUrl: 'app/heroes.component.html',
-  styleUrls: ['app/heroes.component.css'],
+  templateUrl: 'app/components/heroes/heroes.component.html',
+  styleUrls: ['app/components/heroes/heroes.component.css'],
   directives: [HeroDetailComponent]
 })
 
@@ -17,7 +17,6 @@ export class HeroesComponent implements OnInit {
   public title = 'Tour of Heroes';
   public heroes: Hero[];
   selectedHero: Hero;
-  hero: Hero;
 
   constructor(
     private _heroService: HeroService,
